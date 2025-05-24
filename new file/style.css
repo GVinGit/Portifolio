@@ -15,8 +15,8 @@ header {
     background: linear-gradient(200deg, rgba(23, 23, 23, 0.7), rgba(32, 31, 31, 0.7), rgba(32, 31, 31, 0.7), rgba(22, 22, 22, 0.7));
     backdrop-filter: blur(10px);
     color: white;
-    padding: 0px 20px;         /* Menor altura: header fino */
-    height: 70px;              /* Altura reduzida */
+    padding: 0px 20px;
+    height: 70px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -44,7 +44,7 @@ header {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    margin-top: 80px;             /* Espaço para não sobrepor o header */
+    margin-top: 80px;
     margin-left: 30px;
     margin-right: 30px;
 }
@@ -68,12 +68,12 @@ header {
 }
 
 /* ===============================
-   CONTAINER 1
+   CONTAINER 1 (SOBRE MIM)
 ================================ */
 .container-1 {
     width: 69%;
     height: 69%;
-    margin: 30px;
+    margin: 0px;
     margin-top: 50px;
     padding: 0px;
     display: flex;
@@ -94,67 +94,82 @@ header {
     display: flex;
     color: #7fffd4;
     text-align: center;
-    font-weight: 1000;  
+    font-weight: 1000;
 }
 
 /* ===============================
-   CONTAINER 2 (IMAGEM)
+   CONTAINER 2 (IMAGEM PERFIL)
 ================================ */
 .container-2 {
     background: linear-gradient(135deg, #7fffd4, #5db99a, #53a78b, #338066, #000000);
     width: 50%;
     height: 50%;
     padding: 15px;
-    margin: 40px;
+    margin: 0px;
     margin-top: 100px;
     margin-inline-end: 100px;
     border-radius: 100pc;
-    box-shadow: 1px 1px 55pc black;
+    box-shadow: 1px 1px 1000px black;
     transition: 0.3s ease-in-out;
-
 }
 
 .container-2 img {
     width: 360px;
     height: 310px;
     transition: 0.3s ease-in-out;
+    filter: drop-shadow(1px 5px 100px black);
 }
 
 .container-2 img:hover {
-    transition: 0.3s ease-in-out;
     transform: scale(1.1);
+    filter: drop-shadow(15px 5px 50px aquamarine);
 }
 
 .container-2:hover {
-    transition: 0.3s ease-in-out;
     transform: scale(1.1);
-    box-shadow: 1px 5px 100pc black;
-
+    box-shadow: 1px 1px 1000px rgba(127, 255, 212, 0.5);
 }
+
+/* Hover da container-1 afeta container-2 */
+.container-1:hover ~ .container-2 {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 1000px rgba(127, 255, 212, 0.5);
+}
+
 /* ===============================
    CONTAINER 3 (LISTAGEM)
 ================================ */
 .container-3 {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     color: white;
     font-size: 17px;
     font-weight: bold;
-    text-align: center;
-    padding: 20px;
-    margin: 30px;
-    border-radius: 20px;
+    text-align: left;
+    padding: 80px 140px;
+    margin: 45px;
+    border-radius: 45px;
     background-color: rgb(41, 41, 41);
+    gap: 2rem;
+    box-shadow: 1px 10px 250px black;
+    transition: 0.5s ease-in-out;
+}
+
+.container-3-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
 }
 
 .container-3 h1 {
-    margin-top: 10px;
-    margin-bottom: 0px;
-    display: flex;
+    margin-top: 0;
+    margin-bottom: 20px;
     color: #7fffd4;
-    font-weight: 1000;  
+    font-weight: 1000;
+    display: block;
 }
 
 .container-3 ul {
@@ -162,11 +177,34 @@ header {
     margin: 0;
     padding: 0;
     max-width: 800px;
+    font-weight: 333;
+    text-align: left;
 }
 
 .container-3 li {
-    text-align: center;
-    margin: 20px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.container-3 img {
+    width: 360px;
+    height: 310px;
+    transition: 0.5s ease-in-out;
+    margin-left: 40px;
+    box-shadow: 1px 5px 35px rgba(0, 0, 0, 0.5);
+    align-self: center;
+    border-radius: 30px;
+}
+
+.container-3:hover {
+    border-radius: 100px;
+    transform: scale(1.1);
+    box-shadow: 1px 1px 100px rgba(127, 255, 212, 0.5);
+}
+
+.container-3 img:hover {
+    transform: scale(1.1);
+    box-shadow: 15px 5px 50px black;
 }
 
 /* ===============================
@@ -178,57 +216,76 @@ header {
     margin-inline-start: -190px;
     background: none;
     color: aquamarine;
-    border: 3px solid aquamarine; /* Define a cor da borda apenas uma vez */
+    border: 3px solid aquamarine;
     font-size: 17px;
-    font-weight: 1000;  
+    font-weight: 1000;
     transition: 0.3s ease-in-out;
     cursor: pointer;
     outline: none;
 }
 
 .bti:hover {
-    transition: 0.3s ease-in-out;
     background-color: rgb(50, 207, 179);
     color: white;
-    font-weight: 1000;  
     border-color: rgb(50, 207, 179);
-        box-shadow: 1px 5px 35px black;
-
+    box-shadow: 1px 5px 35px black;
 }
-
 
 /* ===============================
    ANIMAÇÃO DE DIGITAÇÃO
    Fonte: Uiverse.io por JkHuger
 ================================ */
 @keyframes typing {
-  from {
-    width: 0;
-  }
+    from {
+        width: 0;
+    }
 }
 
 @keyframes blink-caret {
-  50% {
-    border-color: transparent;
-  }
+    50% {
+        border-color: transparent;
+    }
 }
 
 .animation {
-  font: bold 200% monospace;
-  border-right: .1em solid #afafaf;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 35ch; /* Exato número de caracteres */
-  animation: typing 4s steps(37, end), blink-caret .7s step-end infinite;
-  color: #7fffd4;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  align-self: flex-start;
-  font-size: 20px;
-  margin-inline-start: 80px;
-  margin-bottom: 20px;
-  color: #afafaf;
+    font: bold 200% monospace;
+    border-right: 0.1em solid #afafaf;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 35ch;
+    animation: typing 4s steps(37, end), blink-caret 0.7s step-end infinite;
+    color: #afafaf;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    align-self: flex-start;
+    font-size: 20px;
+    margin-inline-start: 80px;
+    margin-bottom: 50px;
 }
 
+/* ===============================
+   CONTAINER 4 (RODAPÉ)
+================================ */
+.container-4 {
+    background-color: #131212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-left: -30px;
+    margin-right: -30px;
+}
 
+.container-4 h1 {
+    margin-top: 100px;
+    margin-bottom: 0px;
+    display: flex;
+    color: #7fffd4;
+    font-weight: 1000;
+    text-align: center;
+    justify-content: center;
+}
+
+.container-4 ul {
+    list-style: none;
+}
