@@ -9,7 +9,7 @@ body {
 }
 
 /* ===============================
-   HEADER FIXO COM LOGO
+   HEADER FIXO COM LOGO E NAV CENTRALIZADO
 ================================ */
 header {
     background: linear-gradient(200deg, rgba(23, 23, 23, 0.7), rgba(32, 31, 31, 0.7), rgba(32, 31, 31, 0.7), rgba(22, 22, 22, 0.7));
@@ -22,7 +22,7 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    text-align: left;
+    justify-content: space-between;
     z-index: 1000;
 }
 
@@ -35,6 +35,35 @@ header {
     text-transform: uppercase;
     text-shadow: 1px 1px 10px #00ffd0aa;
     margin-left: 2rem;
+}
+
+/* NAV CENTRALIZADO */
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #00ffd0;
+    background-color: rgba(127, 255, 212, 0.1);
 }
 
 /* ===============================
@@ -84,13 +113,15 @@ header {
 
 .container-1 h1 {
     margin-bottom: 15px;
+    margin-left: -20px;
+    font-size: 2.5rem;
+    font-weight: 1000;
 }
 
 .container-1 h5 {
     margin-top: 50px;
     margin-bottom: -15px;
-    margin-inline-start: -185px;
-    margin-right: 40px;
+    margin-inline-start: -220px;
     display: flex;
     color: #7fffd4;
     text-align: center;
@@ -107,6 +138,7 @@ header {
     padding: 15px;
     margin: 0px;
     margin-top: 100px;
+    margin-right: 5px;
     margin-inline-end: 100px;
     border-radius: 100pc;
     box-shadow: 1px 1px 1000px black;
@@ -170,6 +202,7 @@ header {
     color: #7fffd4;
     font-weight: 1000;
     display: block;
+    font-size: 2rem;
 }
 
 .container-3 ul {
@@ -213,7 +246,7 @@ header {
 .bti {
     width: 160px;
     height: 60px;
-    margin-inline-start: -190px;
+    margin-left: -190px;
     background: none;
     color: aquamarine;
     border: 3px solid aquamarine;
@@ -259,8 +292,8 @@ header {
     padding: 0;
     text-align: left;
     align-self: flex-start;
-    font-size: 20px;
-    margin-inline-start: 80px;
+    font-size: 22px;
+    margin-left: 116px;
     margin-bottom: 50px;
 }
 
@@ -285,6 +318,7 @@ header {
     font-weight: 1000;
     text-align: center;
     justify-content: center;
+    font-size: 2rem;
 }
 
 .container-4 ul {
@@ -292,10 +326,10 @@ header {
 }
 
 .cards-projetos {
-    display: flex;                /* Exibe os cards lado a lado */
-    flex-wrap: wrap;              /* Quebra linha se não couber */
-    gap: 40px;                    /* Espaço entre os cards */
-    justify-content: center;      /* Centraliza os cards */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
     margin: 40px 0;
     margin-inline-start: 30px;
     margin-bottom: 100px;
@@ -333,11 +367,11 @@ header {
 }
 
 .container-4:hover {
-    box-shadow: 1px 1px 100px rgba(127, 255, 212, 0.5); /* aquamarine com opacidade 0.5 */
+    box-shadow: 1px 1px 100px rgba(127, 255, 212, 0.5);
 }
 
 .container-4:hover .card-projeto {
-    box-shadow: 0 8px 48px rgba(127, 255, 212, 0.3); /* aquamarine com opacidade 0.5 */
+    box-shadow: 0 8px 48px rgba(127, 255, 212, 0.3);
     border-color: rgba(127, 255, 212, 0.3);
     transform: scale(1.05);
     border: 2px solid #7fffd4;
@@ -363,7 +397,7 @@ header {
 .container-5 {
     color: white;
     padding: 80px 20px;
-    text-align: center;
+    text-align: start;
     border-radius: 50px;
     transition: 0.5s;
 }
@@ -376,8 +410,9 @@ header {
 
 .container-5 h1 {
     color: #7fffd4;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 50px;
+    font-weight: 1000;
 }
 
 .conhecimentos-grid {
@@ -427,4 +462,158 @@ header {
     color: #7fffd4;
     position: absolute;
     left: 0;
+}
+
+/* ===============================
+   CONTAINER 6 (FALE COMIGO) - ATUALIZADO
+================================ */
+.container-6 {
+    background: linear-gradient(-135deg, #000000, #181818, #000000);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 100px;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row; /* Lado a lado */
+    margin: 30px 0;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    gap: 40px; /* Espaço entre contato e imagem */
+}
+
+.container-6-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container-6 h1 {
+    color: #7fffd4;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: 1000;
+    width: 100%;
+    margin-left: 200px;
+}
+
+.contato-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 0;
+}
+
+.email {
+  display: flex; /* faz o fundo envolver só o conteúdo */
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  color: aquamarine;
+  cursor: pointer;
+  margin-left: 200px;
+  width: 250px;
+  height: 25px;
+}
+
+.tel {
+  margin-top: 10px;
+  display: flex; /* faz o fundo envolver só o conteúdo */
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  color: aquamarine;
+  cursor: pointer;
+  margin-left: 200px;
+  width: 150px;
+  height: 25px;
+}
+
+
+.email i, .tel i {
+    color: #7fffd4;
+    font-size: 1.5rem;
+}
+
+/* Hover nas infos de contato: destaca apenas a área do texto com um retângulo cinza pequeno e justo */
+.email:hover, .tel:hover {
+  background-color: rgba(0, 255, 213, 0.1); /* leve destaque no fundo */
+  box-shadow: 0 0 12px rgba(0, 255, 213, 0.4);
+}
+
+.container-6 img {
+    width: 280px;
+    height: 240px;
+    box-shadow: 0 0 30px rgba(127, 255, 212, 0.3);
+    transition: all 0.5s ease;
+    margin-top: 0; /* Remove espaçamento extra */
+    margin-right: 200px;
+}
+
+.container-6 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(127, 255, 212, 0.5);
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: #7fffd4;
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #00ffd0;
+    transform: scale(1.2);
+    text-shadow: 0 0 15px #00ffd0aa;
+}
+
+/* ===============================
+   RESPONSIVIDADE
+================================ */
+@media (max-width: 1200px) {
+    .container-6 {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 30px;
+    }
+    .container-6 img {
+        align-self: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-6 {
+        padding: 40px 20px;
+    }
+    
+    .container-6 h1 {
+        font-size: 2rem;
+    }
+    
+    .email, .tel {
+        font-size: 1rem;
+    }
+    
+    .container-6 img {
+        width: 220px;
+        height: 180px;
+    }
+    
+    .social-links a {
+        font-size: 1.5rem;
+    }
 }
